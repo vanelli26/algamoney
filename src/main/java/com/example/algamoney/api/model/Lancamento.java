@@ -3,6 +3,7 @@ package com.example.algamoney.api.model;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -16,25 +17,31 @@ public class Lancamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long codigo;
 
+    @NotNull
     String descricao;
 
+    @NotNull
     @Column(name = "data_vencimento")
     LocalDate dataVencimento;
 
     @Column(name = "data_pagamento")
     LocalDate dataPagamento;
 
+    @NotNull
     BigDecimal valor;
 
     String observacao;
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     TipoLancamento tipo;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "codigo_categoria")
     Categoria categoria;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "codigo_pessoa")
     Pessoa pessoa;
