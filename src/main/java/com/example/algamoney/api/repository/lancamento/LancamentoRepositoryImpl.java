@@ -2,6 +2,7 @@ package com.example.algamoney.api.repository.lancamento;
 
 import com.example.algamoney.api.dto.LancamentoEstatisticaCategoria;
 import com.example.algamoney.api.dto.LancamentoEstatisticaDia;
+import com.example.algamoney.api.dto.LancamentoEstatisticaPessoa;
 import com.example.algamoney.api.model.Lancamento;
 import com.example.algamoney.api.repository.filter.LancamentoFilter;
 import com.example.algamoney.api.repository.projection.ResumoLancamento;
@@ -112,6 +113,29 @@ public class LancamentoRepositoryImpl implements LancamentoRepositoryQuery {
         criteria.groupBy(root.get("tipo"), root.get("dataVencimento"));
 
         TypedQuery<LancamentoEstatisticaDia> query = manager.createQuery(criteria);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<LancamentoEstatisticaPessoa> porPessoa(LocalDate inicio, LocalDate fim) {
+        CriteriaBuilder builder = manager.getCriteriaBuilder();
+        CriteriaQuery<LancamentoEstatisticaPessoa> criteria = builder.createQuery(LancamentoEstatisticaPessoa.class);
+        Root<Lancamento> root = criteria.from(Lancamento.class);
+
+        criteria.select(builder.construct(LancamentoEstatisticaPessoa.class
+                , root.get("tipo")
+                , root.get("pessoa")
+                , builder.sum(root.get("valor")))
+        );
+
+        criteria.where(
+                builder.greaterThanOrEqualTo(root.get("dataVencimento"), inicio),
+                builder.lessThanOrEqualTo(root.get("dataVencimento"), fim)
+        );
+
+        criteria.groupBy(root.get("tipo"), root.get("pessoa"));
+
+        TypedQuery<LancamentoEstatisticaPessoa> query = manager.createQuery(criteria);
         return query.getResultList();
     }
 
