@@ -1,10 +1,13 @@
 package com.example.algamoney.api.service;
 
 import com.example.algamoney.api.dto.LancamentoEstatisticaPessoa;
+import com.example.algamoney.api.mail.Mailer;
 import com.example.algamoney.api.model.Lancamento;
 import com.example.algamoney.api.model.Pessoa;
+import com.example.algamoney.api.model.Usuario;
 import com.example.algamoney.api.repository.LancamentoRepository;
 import com.example.algamoney.api.repository.PessoaRepository;
+import com.example.algamoney.api.repository.UsuarioRepository;
 import com.example.algamoney.api.service.exception.PessoaInexistenteOuInativaException;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -12,6 +15,7 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
@@ -25,11 +29,19 @@ import java.util.Map;
 @Service
 public class LancamentoService {
 
+    private static final String DESTINATARIO = "ROLE_PESQUISAR_LANCAMENTO";
+
     @Autowired
     PessoaRepository pessoaRepository;
 
     @Autowired
     LancamentoRepository lancamentoRepository;
+
+    @Autowired
+    UsuarioRepository usuarioRepository;
+
+    @Autowired
+    Mailer mailer;
 
     public Lancamento salvar(Lancamento lancamento) {
         Pessoa pessoa = pessoaRepository.findOne(lancamento.getPessoa().getCodigo());
@@ -80,5 +92,12 @@ public class LancamentoService {
         JasperPrint jasperPrint = JasperFillManager.fillReport(inputStream, parametros, new JRBeanCollectionDataSource(dados));
 
         return JasperExportManager.exportReportToPdf(jasperPrint);
+    }
+
+    @Scheduled(cron = "0 0 6 * * *")
+    public void avisarSobreLancamentosVencidos(){
+        List<Lancamento> lancamentosVencidos = lancamentoRepository.findByDataVencimentoLessThanEqualAndDataPagamentoIsNull(LocalDate.now());
+        List<Usuario> destinatarios = usuarioRepository.findByPermissoesDescricao(DESTINATARIO);
+        mailer.avisarSobreLancamentosVencidos(lancamentosVencidos, destinatarios);
     }
 }
