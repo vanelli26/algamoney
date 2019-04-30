@@ -13,6 +13,8 @@ import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -30,6 +32,7 @@ import java.util.Map;
 public class LancamentoService {
 
     private static final String DESTINATARIO = "ROLE_PESQUISAR_LANCAMENTO";
+    private static final Logger LOGGER = LoggerFactory.getLogger(LancamentoService.class);
 
     @Autowired
     PessoaRepository pessoaRepository;
@@ -96,8 +99,24 @@ public class LancamentoService {
 
     @Scheduled(cron = "0 0 6 * * *")
     public void avisarSobreLancamentosVencidos(){
+        if (LOGGER.isDebugEnabled()){
+            LOGGER.debug("Iniciando envio de e-mail sobre lançamentos vencidos!");
+        }
+
         List<Lancamento> lancamentosVencidos = lancamentoRepository.findByDataVencimentoLessThanEqualAndDataPagamentoIsNull(LocalDate.now());
+        if (lancamentosVencidos.isEmpty()){
+            LOGGER.info("Nenhum lançamento vencido para enviar e-mail!");
+            return;
+        }
+        LOGGER.info("{} lançamentos vencidos!", lancamentosVencidos.size());
+
         List<Usuario> destinatarios = usuarioRepository.findByPermissoesDescricao(DESTINATARIO);
+        if (destinatarios.isEmpty()){
+            LOGGER.warn("Nenhum destinatario encontrado para enviar as notificações!");
+            return;
+        }
+
         mailer.avisarSobreLancamentosVencidos(lancamentosVencidos, destinatarios);
+        LOGGER.info("Envio de e-mail sobre lançamentos vencidos concluido!");
     }
 }
