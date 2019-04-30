@@ -6,6 +6,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class AlgamoneyApiProperty {
 
     private final Mail mail = new Mail();
+    private final S3 s3 = new S3();
+    public S3 getS3() {
+        return s3;
+    }
     private String originPermitida = "http://localhost:8000";
     public String getOriginPermitida() {
         return originPermitida;
@@ -26,7 +30,6 @@ public class AlgamoneyApiProperty {
             this.enableHttps = enableHttps;
         }
     }
-
     public static class Mail {
         private String host;
         private Integer port;
@@ -58,6 +61,29 @@ public class AlgamoneyApiProperty {
             this.password = password;
         }
     }
-
     public Mail getMail() { return mail;}
+    public static class S3 {
+        private String accessKeyId;
+        private String secretAccessKey;
+        private String bucket = "ev-s3-files";
+        public String getBucket() {
+            return bucket;
+        }
+        public void setBucket(String bucket) {
+            this.bucket = bucket;
+        }
+        public String getAccessKeyId() {
+            return accessKeyId;
+        }
+        public void setAccessKeyId(String accessKeyId) {
+            this.accessKeyId = accessKeyId;
+        }
+        public String getSecretAccessKey() {
+            return secretAccessKey;
+        }
+        public void setSecretAccessKey(String secretAccessKey) {
+            this.secretAccessKey = secretAccessKey;
+        }
+    }
+
 }

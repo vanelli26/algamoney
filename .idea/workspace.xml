@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abf5f279-7b22-466c-a09b-e8215e3ae243" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Contato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V05__criar_tabela_contato.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/S3Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/PessoaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/PessoaResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/LancamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/LancamentoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/PessoaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/property/AlgamoneyApiProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/property/AlgamoneyApiProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/LancamentoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/LancamentoResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/algamoney/api/model/Lancamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/algamoney/api/model/Lancamento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/algamoney/api/resource/LancamentoResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/algamoney/api/resource/LancamentoResource.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,47 +22,61 @@
     <session id="-674943329">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.10" value="3" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="HTML" value="3" />
-          <entry key="JAVA" value="44" />
+          <entry key="JAVA" value="49" />
           <entry key="JSON" value="1" />
-          <entry key="Properties" value="11" />
+          <entry key="Properties" value="12" />
           <entry key="SQL" value="1" />
-          <entry key="XML" value="7" />
+          <entry key="XML" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="44" />
-          <entry key="JAVA" value="2119" />
+          <entry key="JAVA" value="2154" />
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Properties" value="69" />
+          <entry key="Properties" value="71" />
           <entry key="SQL" value="30" />
-          <entry key="XML" value="12" />
+          <entry key="XML" value="29" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/S3Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+            <state relative-caret-position="136">
+              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/property/AlgamoneyApiProperty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+              <folding>
+                <element signature="class#Seguranca#0;class#AlgamoneyApiProperty#0" />
+                <element signature="class#Mail#0;class#AlgamoneyApiProperty#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,18 +103,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/TipoLancamento.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/repository/lancamento/LancamentoRepositoryQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/repository/lancamento/LancamentoRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/LancamentoResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/property/AlgamoneyApiProperty.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/MailConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/package.json" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mail/aviso-lancamentos-vencidos.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/repository/LancamentoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/repository/UsuarioRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/mail/Mailer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/LancamentoService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/application-prod.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V05__criar_tabela_contato.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Contato.java" />
@@ -110,6 +118,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Pessoa.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/PessoaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/LancamentoResource.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/S3Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/property/AlgamoneyApiProperty.java" />
       </list>
     </option>
   </component>
@@ -190,7 +203,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algamoney-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algamoney-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -208,7 +228,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556594511854" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556655119994" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -290,7 +310,8 @@
       <workItem from="1555360342566" duration="3323000" />
       <workItem from="1555510512550" duration="6902000" />
       <workItem from="1555552130419" duration="4510000" />
-      <workItem from="1556590349989" duration="4154000" />
+      <workItem from="1556590349989" duration="4310000" />
+      <workItem from="1556636486787" duration="5446000" />
     </task>
     <task id="LOCAL-00001" summary="Aula 22.7">
       <created>1554918198255</created>
@@ -303,7 +324,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36689000" />
+    <option name="totallyTimeSpent" value="42291000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,7 +339,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20042644" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -381,9 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -405,9 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -453,29 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/LancamentoResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="method#porCategoria#0;class#LancamentoResource#0" />
-            <element signature="method#pesquisar#0;class#LancamentoResource#0" />
-            <element signature="method#resumir#0;class#LancamentoResource#0" />
-            <element signature="method#buscarPeloCodigo#0;class#LancamentoResource#0" />
-            <element signature="method#criar#0;class#LancamentoResource#0" />
-            <element signature="method#handlePessoaInexistenteOuInativaException#0;class#LancamentoResource#0" />
-            <element signature="method#atualizar#0;class#LancamentoResource#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/property/AlgamoneyApiProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/MailConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -485,23 +477,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates.mail/aviso-lancamentos-vencidos.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/package.json" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mail/aviso-lancamentos-vencidos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="22" column="79" lean-forward="true" selection-start-line="22" selection-start-column="79" selection-end-line="22" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -530,11 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="method#enviarEmail#0;class#Mailer#0" />
-            <element signature="method#enviarEmail#1;class#Mailer#0" />
-            <element signature="method#avisarSobreLancamentosVencidos#0;class#Mailer#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -545,25 +519,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="13" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/LancamentoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="method#salvar#0;class#LancamentoService#0" />
-            <element signature="method#atualizar#0;class#LancamentoService#0" />
-            <element signature="method#validarPessoa#0;class#LancamentoService#0" />
-            <element signature="method#buscarLancamentoExistente#0;class#LancamentoService#0" />
-            <element signature="method#relatorioPorPessoa#0;class#LancamentoService#0" />
-            <element signature="method#avisarSobreLancamentosVencidos#0;class#LancamentoService#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -592,12 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-          <folding>
-            <element signature="method#atualizar#0;class#PessoaService#0" />
-            <element signature="method#atualizarPropriedadeAtivo#0;class#PessoaService#0" />
-            <element signature="method#buscarPessoaPeloCodigo#0;class#PessoaService#0" />
-            <element signature="method#salvar#0;class#PessoaService#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,8 +563,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+        <state relative-caret-position="697">
+          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/LancamentoResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="55" column="84" selection-start-line="55" selection-start-column="84" selection-end-line="55" selection-end-column="84" />
+          <folding>
+            <element signature="method#uploadAnexo#0;class#LancamentoResource#0" />
+            <element signature="method#relatorioPorPessoa#0;class#LancamentoResource#0" />
+            <element signature="method#porCategoria#0;class#LancamentoResource#0" />
+            <element signature="method#pesquisar#0;class#LancamentoResource#0" />
+            <element signature="method#resumir#0;class#LancamentoResource#0" />
+            <element signature="method#buscarPeloCodigo#0;class#LancamentoResource#0" />
+            <element signature="method#criar#0;class#LancamentoResource#0" />
+            <element signature="method#handlePessoaInexistenteOuInativaException#0;class#LancamentoResource#0" />
+            <element signature="method#atualizar#0;class#LancamentoResource#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="135" column="21" lean-forward="true" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-s3/1.11.274/aws-java-sdk-s3-1.11.274.jar!/com/amazonaws/services/s3/model/Tag.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/S3Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/property/AlgamoneyApiProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+          <folding>
+            <element signature="class#Seguranca#0;class#AlgamoneyApiProperty#0" />
+            <element signature="class#Mail#0;class#AlgamoneyApiProperty#0" />
+          </folding>
         </state>
       </provider>
     </entry>
