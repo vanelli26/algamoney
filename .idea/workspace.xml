@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abf5f279-7b22-466c-a09b-e8215e3ae243" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/dto/Anexo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/repository/listener/LancamentoAnexoListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/storage/S3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V06__coluna_anexo_tb_lancamento.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/AlgamoneyApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/AlgamoneyApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/S3Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/config/S3Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/LancamentoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/resource/LancamentoResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/LancamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/LancamentoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/algamoney/api/resource/LancamentoResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/algamoney/api/resource/LancamentoResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,6 +35,8 @@
           <entry key="HTML" value="3" />
           <entry key="JAVA" value="66" />
           <entry key="JSON" value="1" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="12" />
           <entry key="SQL" value="2" />
           <entry key="XML" value="8" />
@@ -53,7 +46,8 @@
         <counts>
           <entry key="HTML" value="44" />
           <entry key="JAVA" value="2312" />
-          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="Markdown" value="186" />
+          <entry key="PLAIN_TEXT" value="26" />
           <entry key="Properties" value="71" />
           <entry key="SQL" value="30" />
           <entry key="XML" value="29" />
@@ -63,23 +57,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/repository/listener/LancamentoAnexoListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="459">
+                <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -131,6 +116,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/service/LancamentoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/AlgamoneyApiApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/banner.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -215,27 +202,7 @@
               <item name="algamoney-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algamoney-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algamoney-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algamoney-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algamoney-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,7 +219,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556765955728" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556767198288" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -336,7 +303,7 @@
       <workItem from="1555552130419" duration="4510000" />
       <workItem from="1556590349989" duration="4310000" />
       <workItem from="1556636486787" duration="5618000" />
-      <workItem from="1556759555184" duration="5997000" />
+      <workItem from="1556759555184" duration="7434000" />
     </task>
     <task id="LOCAL-00001" summary="Aula 22.7">
       <created>1554918198255</created>
@@ -349,7 +316,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48460000" />
+    <option name="totallyTimeSpent" value="49897000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -364,7 +331,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20469083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20469083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -374,7 +341,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -691,6 +658,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/repository/listener/LancamentoAnexoListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -701,10 +675,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/algamoney/api/model/Lancamento.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/banner.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        <state relative-caret-position="102">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="459">
+            <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
