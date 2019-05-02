@@ -1,5 +1,6 @@
 package com.example.algamoney.api.model;
 
+import com.example.algamoney.api.repository.listener.LancamentoAnexoListener;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
@@ -9,6 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@EntityListeners(LancamentoAnexoListener.class)
 @Getter
 @Setter
 @Entity
@@ -48,6 +50,11 @@ public class Lancamento {
     @ManyToOne
     @JoinColumn(name = "codigo_pessoa")
     Pessoa pessoa;
+
+    String anexo;
+
+    @Transient
+    String urlAnexo;
 
     @JsonIgnore
     public boolean isReceita() { return TipoLancamento.RECEITA.equals(this.tipo); }
